@@ -14,7 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                sh './build.sh' // Replace with your actual build script or command.
+                bat 'build.bat' // Replace with your actual build script or command for Windows.
             }
         }
 
@@ -22,7 +22,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh './test.sh' // Replace with your actual test script or command.
+                bat 'test.bat' // Replace with your actual test script or command for Windows.
             }
         }
 
@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                sh './deploy.sh' // Replace with your actual deployment script or command.
+                bat 'deploy.bat' // Replace with your actual deployment script or command for Windows.
             }
         }
     }
